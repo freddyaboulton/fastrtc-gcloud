@@ -15,6 +15,7 @@ stream = Stream(
     mode="send-receive",
     concurrency_limit=5,
     rtc_configuration=get_hf_turn_credentials,
+    server_rtc_configuration=get_hf_turn_credentials(ttl=3_600 * 24 * 10)
     time_limit=90,
 )
 
